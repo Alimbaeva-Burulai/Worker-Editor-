@@ -1,0 +1,22 @@
+﻿<Window x:Class="WorkerEditor.WorkerEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkerEditor"
+        mc:Ignorable="d"
+        Title="WorkerEditorWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:Worker />
+    </Window.DataContext>
+    <Grid>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="60,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="-12.761,-6.996" Width="126"/>
+        <TextBox Text="{Binding Path=WorkerName}" HorizontalAlignment="Left" Margin="365,69,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Phone" HorizontalAlignment="Left" Margin="60,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="-12.761,-6.996" Width="126"/>
+        <TextBox Text="{Binding Path=Phone}" HorizontalAlignment="Left" Margin="365,136,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <CheckBox Content="Is sick?" IsChecked="{Binding Path=IsSick}" HorizontalAlignment="Left" Margin="365,0,0,0" VerticalAlignment="Center"/>
+        <CheckBox Content="Is on vacation?" IsChecked="{Binding Path=IsOnVacation}" HorizontalAlignment="Left" Margin="365,273,0,0" VerticalAlignment="Top"/>
+        <Button Content="Ok" HorizontalAlignment="Left" Margin="266,346,0,0" VerticalAlignment="Top" Width="75" Click="OkClick"/>
+
+    </Grid>
+</Window>
